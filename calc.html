@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Project</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="display">
+            <input readonly placeholder="0" id="input" />
+        </div>
+
+        <div class="buttons">
+
+            <!-- full erase -->
+            <input type="button" value="AC" id="clear" onclick="input.value = '' ">
+
+            <!-- single erase -->
+            <input type="button" value="DEL" id="erase" onclick="input.value = input.value.toString().slice(0,-1) ">
+
+            <!-- buttons -->
+            <input type="button" value="/" class="input-button" onclick="input.value += '/'"/>
+            <input type="button" value="*" class="input-button" onclick="input.value += '*'"/>
+
+            <input type="button" value="7" class="input-button" onclick="input.value += '7'"/>
+            <input type="button" value="8" class="input-button" onclick="input.value += '8'"/>
+            <input type="button" value="9" class="input-button" onclick="input.value += '9'"/>
+            <input type="button" value="-" class="input-button" onclick="input.value += '-'"/>
+
+            <input type="button" value="6" class="input-button" onclick="input.value += '6'"/>
+            <input type="button" value="5" class="input-button" onclick="input.value += '5'"/>
+            <input type="button" value="4" class="input-button" onclick="input.value += '4'"/>
+            <input type="button" value="+" class="input-button" onclick="input.value += '+'"/>
+
+            <input type="button" value="1" class="input-button" onclick="input.value += '1'"/>
+            <input type="button" value="2" class="input-button" onclick="input.value += '2'"/>
+            <input type="button" value="3" class="input-button" onclick="input.value += '3'"/>
+
+            <input type="button" value="=" class="input-button" id="equal" onclick="input.value= eval(input.value)" />
+            <input type="button" value="0" class="input-button" onclick="input.value += '0'"/>
+            <input type="button" value="." class="input-button" onclick="input.value += '.'"/>
+
+        </div> 
+
+    </div>
+
+<script src="calc.js"></script>
+</body>
+</html>

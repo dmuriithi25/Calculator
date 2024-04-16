@@ -1,0 +1,88 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    /* outline: 1px solid yellow; */
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to bottom,      /*direction of gradient. to top, to left, to right etc...*/
+        rgba(255, 127, 80, 0.632),
+        rgb(208, 72, 14),
+        rgb(15, 15, 15)
+        );
+}
+
+.container{
+    width: 400px;
+    background-color: #15173c;
+    padding: 50px 30px;
+    /* position: absolute;
+    transform: translate(-50%, -50%);
+    top:  50%;
+    left: 50%; */
+    border-radius: 15px;
+    box-shadow: 0 20px 50px;
+}
+
+.display {
+    width: 100%;
+}
+
+.display input{
+    width: 100%;
+    padding: 15px 10px;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 40px
+}
+
+.display input::placeholder {
+    color: lightgray;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.buttons input[type="button"] {
+    font-size: 24px;
+    padding: 17px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    background-color: #272956a7;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sexy. Buttons are 3d when pressed */
+.buttons input[type="button"]:active{
+    background:  #000;
+    transform: translate(2px 2px);
+}
+
+input[type="button"]#equal{
+    grid-row: span 2;
+    background-color: coral;
+}
+
+input[type="button"]#equal:active{
+    background:  rgb(202, 97, 59);
+    transform: translate(2px 2px);
+}
+
+input[type="button"][value="0"]{
+    grid-column: span 2;
+}
